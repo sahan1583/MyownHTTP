@@ -1,0 +1,76 @@
+Request
+Host - GET, PUT
+Host  -> The "Host" header field in a request provides the host and port information from the target URI, enabling the origin server to distinguish among resources while servicing requests for multiple host names.
+
+Host: :port - optional 
+
+GET /pub/WWW/ HTTP/1.1
+Host: www.example.org
+
+Connection - GET, PUT
+Connection ->  The "Connection" header field allows the sender to list desired control options for the current connection.  Connection options are case-insensitive.
+
+Connection: close
+
+Date - GET, PUT
+Date -> The "Date" header field represents the date and time at which the message was originated, having the same semantics as the Origination Date Field (orig-date) defined in Section 3.6.1 of [RFC5322]. The field value is an HTTP-date, as defined in Section 5.6.7.
+
+Date: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+
+Accept - GET, PUT
+Accept -> The "Accept" header field can be used by user agents to specify their preferences regarding response media types. For example, Accept header fields can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an in-line image.
+
+text/html if the file asked in the url has extension .html 
+
+application/pdf if the file asked in the url has extension .pdf -> type: 
+
+image/jpeg if the file asked for has extension .jpg
+
+text/* for anything else
+
+text/html: "Accept: text/html"
+application/pdf: "Accept: application/pdf"
+image/jpeg: "Accept: image/jpeg"
+text/: "Accept: text/"
+
+Accept-Language - GET, PUT
+Accept-Language: en-US,en;q=0.5 
+
+The If-Modified-Since - GET
+The If-Modified-Since request HTTP header makes the request conditional: the server sends back the requested resource, with a 200 status, only if it has been last modified after the given date. If the resource has not been modified since, the response is a 304 without any body;
+
+If-Modified-Since -> GET only 
+If-Modified-Since: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
+
+Content-Language - PUT
+Content-Language: en-US
+
+Content-Length - PUT
+Content-Length: 
+
+Content-Type - PUT
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
+
+Content-Type -> PUT
+
+NOTE:
+The Accept header always indicates what kind of response from the server a client can accept. Content-type is about the content of the current request or response, depending on which kind of HTTP message it is applied.
+
+Response - GET, PUT
+Expires
+The Expires HTTP header contains the date/time after which the response is considered expired.
+Expires: Expires: Wed, 21 Oct 2015 07:28:00 GMT
+
+Cache-Control
+The Cache-Control HTTP header field holds directives (instructions) — in both requests and responses — that control caching in browsers and shared caches (e.g. Proxies, CDNs).
+
+Cache-control: no-store
+
+Content-Language
+Content-Language: en-US
+
+Content-Length
+Content-Length: 
+
+Content-Type
+The Content-Type representation header is used to indicate the original media type of the resource (prior to any content encoding applied for sending).
